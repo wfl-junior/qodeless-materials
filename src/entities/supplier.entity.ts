@@ -6,11 +6,11 @@ import { ElectricMaterial } from "./electric-material.entity";
 @ObjectType()
 @Entity({ name: "suppliers" })
 export class Supplier extends BaseEntity {
-  @Field()
+  @Field({ nullable: false })
   @Column("text", { nullable: false, unique: true })
   name: string;
 
-  @Field(() => [ElectricMaterial])
+  @Field(() => [ElectricMaterial], { nullable: true })
   @OneToMany(
     () => ElectricMaterial,
     electricMaterial => electricMaterial.supplier,
