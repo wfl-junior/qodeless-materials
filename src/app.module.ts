@@ -4,8 +4,8 @@ import { GraphQLModule } from "@nestjs/graphql";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import path from "node:path";
 import { ormconfig } from "ormconfig";
-import { ElectricMaterialResolver } from "~/graphql/resolvers/electric-material";
-import { SupplierResolver } from "./graphql/resolvers/supplier";
+import { ElectricMaterialResolver } from "~/graphql/resolvers/electric-material.resolver";
+import { SupplierResolver } from "./graphql/resolvers/supplier.resolver";
 
 @Module({
   imports: [
